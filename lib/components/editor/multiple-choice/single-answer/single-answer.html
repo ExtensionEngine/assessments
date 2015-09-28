@@ -1,0 +1,18 @@
+
+<template name="MultipleChoiceSingleAnswerEditor">
+  {{> aemcQuestionInput}}
+  <div class="row form-group">
+    <div class="col-lg-12">
+      {{#each assessment.components.options}}
+        <div class="radio">
+          <label>
+            <input type="radio" name="type" value="{{value}}" checked="{{value}}">
+            {{value}}
+            <span class="fa fa-close remove-option"></span>
+          </label>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  {{> aemcCreateOption}}
+</template>

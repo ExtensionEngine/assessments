@@ -9,11 +9,11 @@ Package.describe({
 
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.3');
+  api.versionsFrom('1.2.0.2');
 
   api.use(['templating', 'coffeescript']);
   api.use(['peerlibrary:blaze-components@0.13.0']);
-  api.use(['zeroasterisk:s-enum']);
+  api.use(['zeroasterisk:s-enum@1.0.2']);
 
   api.addFiles('lib/components/editor/types.coffee');
   api.addFiles('lib/components/editor/editor.coffee');
@@ -32,5 +32,4 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('extensionengine:assessments');
 });
